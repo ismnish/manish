@@ -1,0 +1,122 @@
+:root {
+    --bg0range: #e84949;
+}
+.skills-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+    margin-top: 2rem;
+    width: 100%;
+    gap:30px;
+}
+.skill-container-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;   
+    /* flex-wrap: wrap; */
+}
+.skill-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    position: relative;
+    gap: 1rem;
+}
+.skill-fade-text{
+    position: absolute;
+    font-size: 4.5rem;
+    font-style: bold;
+    color: rgb(231, 231, 231);
+    top: -3%;
+    left: 5%;
+    user-select: none;
+}
+.blob-style{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: blobAnimate 3s linear infinite;
+}
+
+@keyframes blobAnimate{
+    50%{
+        top:54%;
+        left:46%;
+    }
+}
+.skills-logo{
+    /* width: 90%; */
+    transition: all 0.5s ;
+}
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+.skill-heading{
+    font-size: 40px;
+    font-style: bold;
+    color: var(--bg0range);
+    line-height: 50px;
+}
+.caps{
+    font-size: 60px;
+}
+.skill-subHeading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align:justify;
+}
+.skill-subHeading p{
+    margin: 15px 0;
+}
+@media (max-width: 680px) {
+    .skills-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+        /* margin-top: 2rem; */
+        width: 100%;
+        gap:30px;
+    }
+    .skill-fade-text{
+        position: absolute;
+        font-size: 3rem;
+        font-style: bold;
+        color: rgb(231, 231, 231);
+        top: -3%;
+        left: 5%;
+        user-select: none;
+    }
+    .skill-container-left {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .skill-heading{
+        margin-top: 3.5rem;
+    }
+    .skill-subHeading p{
+
+        width: 100%;
+    }
+    .skill-fade-text{
+        position: absolute;
+        font-size: 4rem;
+        font-style: bold;
+        color: rgb(231, 231, 231);
+        top: -1%;
+        left: 5%;
+        user-select: none;
+    }
+
+    .skill-subHeading p{
+       width: 100%;
+    }
+    .skill-container-right{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}
